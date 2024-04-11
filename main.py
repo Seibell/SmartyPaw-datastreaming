@@ -60,7 +60,7 @@ def fake_sensor_data():
         
         data = f"Timestamp: {datetime.now().isoformat()}, State: {activity_state}, Heart Rate: {heart_rate}, Steps: {steps}\n"
         yield data.encode()
-        time.sleep(1)
+        time.sleep(5)
 
 ## Sick Dog Data Simulation
 def get_next_state_sick():
@@ -107,7 +107,7 @@ def fake_sensor_data_sick():
         
         data = f"Timestamp: {datetime.now().isoformat()}, State: {activity_state}, Heart Rate: {heart_rate}, Steps: {steps}\n"
         yield data.encode()
-        time.sleep(1)
+        time.sleep(5)
 
 @app.get("/data/stream")
 async def stream_data():
