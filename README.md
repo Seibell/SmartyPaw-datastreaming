@@ -1,0 +1,2 @@
+ - https://smartypaw-datastreaming.onrender.com/data/stream for healthy dog data
+ - https://smartypaw-datastreaming.onrender.com/data/sick/stream for sick dog data
