@@ -91,6 +91,8 @@ def get_next_state_sick():
 def fake_sensor_data_sick():
     while True:
         get_next_state_sick()
+
+        activity_state = "high_activity"
         
         # Data generation with variability suited to a sick dog
         if activity_state == "normal":
@@ -99,7 +101,7 @@ def fake_sensor_data_sick():
             temperature = float(np.random.normal(loc=38.7, scale=0.6))
         elif activity_state == "high_activity":
             heart_rate = int(np.random.normal(loc=140, scale=30))
-            steps = random.randint(10, 30)
+            steps = random.randint(0, 10)
             temperature = float(np.random.normal(loc=39.7, scale=0.8))
         elif activity_state == "rest":
             heart_rate = int(np.random.normal(loc=60, scale=7))
